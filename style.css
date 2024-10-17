@@ -1,0 +1,1204 @@
+/*responsive code*/
+/* Laptop and larger screens */
+@media (min-width: 992px) {
+  .home-content h1 {
+    font-size: 6rem; /* Adjust heading size for larger screens */
+  }
+  .home-content h3 {
+    font-size: 3.5rem;
+  }
+  .home-img img {
+    width: 25vw;
+    height: 25vw;
+  }
+  .about-content p {
+    font-size: 2rem;
+  }
+  .btn {
+    font-size: 1.6rem;
+    padding: 0.8rem 2.5rem;
+  }
+  .project-box {
+    height: 500px;
+  }
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 10%;
+  }
+  .navbar a {
+    font-size: 1.6rem;
+    margin-left: 3rem;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+  .home-img img {
+    width: 50vw;
+    height: 50vw;
+  }
+  .about-content p {
+    font-size: 1.8rem;
+  }
+  .btn {
+    font-size: 1.4rem;
+    padding: 0.7rem 2rem;
+  }
+  .project-box {
+    height: 400px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 767px) {
+  .header {
+    padding: 1.5rem 5%;
+    flex-direction: column; /* Stack logo and navbar vertically */
+  }
+  .logo {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  .navbar a {
+    font-size: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  .home {
+    flex-direction: column;
+    gap: 5rem;
+  }
+  .home-content {
+    align-items: center;
+    text-align: center;
+  }
+  .home-content h1 {
+    font-size: 4rem;
+  }
+  .home-content h3 {
+    font-size: 2rem;
+  }
+  .home-img img {
+    width: 70vw;
+    height: 70vw;
+  }
+  .about-content p {
+    font-size: 1.5rem;
+  }
+  .btn {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+  }
+  .btn-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .project-box {
+    height: 350px;
+  }
+  .project-info p {
+    font-size: 2.5rem;
+  }
+  .marquee h3 {
+    font-size: 3rem;
+  }
+}
+
+/* Extra small mobile phones */
+@media (max-width: 480px) {
+  .header {
+    padding: 1rem 3%;
+  }
+  .navbar a {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+  .home-content h3 {
+    font-size: 1.8rem;
+  }
+  .home-img img {
+    width: 80vw;
+    height: 80vw;
+  }
+  .about-content p {
+    font-size: 1.3rem;
+  }
+  .btn {
+    font-size: 1rem;
+    padding: 0.4rem 1.2rem;
+  }
+  .project-box {
+    height: 300px;
+  }
+  .project-info p {
+    font-size: 2rem;
+  }
+  .marquee h3 {
+    font-size: 2.5rem;
+  }
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins";
+}
+:root {
+  --bg-color: #030609;
+  --second-bg-color: #101010;
+  --text-color: white;
+  --main-color: #ff9a00;
+}
+html {
+  font-size: 60%;
+  overflow-x: hidden;
+}
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+
+}
+
+.header{
+  position: fixed;
+  width: 100%;
+  top: 0 ;
+  left: 0;
+  padding: 4rem 15%;
+  background-color: rgba(0, 0, 0, 0.3 );
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* #menu-icon{
+  font-size: 3.5rem;
+  color: var(--main-color)
+  display: none;
+} */
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-family: 'Inter', sans-serif;
+ 
+}
+
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+span{
+  background: linear-gradient(to right, orange, #ff4d4d);
+  background-clip: text;
+  color: transparent;
+  margin-left: 1rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar a{
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  font-weight: 500;
+  transition: 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar a:hover{
+  color: var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+}
+
+.gradient-btn{
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  background: linear-gradient(to right, orange, #ff4d4d);
+
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3 ease-in-out;
+  color: white;
+  border: none;
+  text-wrap: nowrap;
+}
+
+.gradient-btn:hover{
+  transform: scale(1.05);
+}
+
+section{
+  min-height: 100vh;
+  padding: 10rem 15%;
+}
+
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+.home-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  font-family: 'Inter', sans-serif;
+}
+.home-content h1{
+  font-size: 8rem;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+ 
+}
+.home-content h3{
+  /* margin: 1rem 0; */
+  font-size: 4rem;
+  font-family: 'Inter', sans-serif;
+}
+.home-content p{
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.8;
+  font-family: 'Jura', sans-serif;
+}
+.home-img img{
+  width: 32vw;
+  height: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+.home-img img:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color),
+              0 0 100px var(--main-color);
+}
+.social-icons a{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem;
+  background: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  margin: 3rem 0.5rem;
+  transition: 0.3s ease-in-out;
+}
+
+.social-icons a:hover{
+  color: var(--text-color);
+  background-color: var(--main-color);
+  transform: scale(1.2)translateY(-5px);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+.btn-group{
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 5%;
+}
+.btn{
+  display: inline-block;
+  padding: 1rem 3rem;
+  background-color: var(--main-color);
+  box-shadow: 0 0 25px var(--main-color);
+  border-radius: 3rem;
+  font-size: 1.8rem;
+ color: black;
+ border: 2px solid transparent;
+ font-weight: 600;
+transition: 0.3 ease-in-out;
+font-family: 'Inter', sans-serif;
+}
+
+.btn:hover{
+  transform: scale(1.05);
+  box-shadow:  0 0 25px var(--main-color),
+               0 0 25px var(--main-color);
+}
+
+.btn-group a:nth-of-type(2){
+  background-color: black;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  box-shadow: 0 0 25px transparent;
+}
+
+.btn-group a:nth-of-type(2):hover{
+  box-shadow: 0 0 25px var(--main-color);
+  background-color: var(--main-color);
+  color: black;
+}
+
+/* .about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.about-img img{
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 25px var(--main-color);
+  transition: 0.4 ease-in-out;
+}
+
+.about-img img:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color),
+              0 0 100px var(--main-color);
+}
+
+.about-content h2{
+  font-size: 7rem;
+  text-align: left;
+}
+
+.about-content p{
+  font-size: 1.8rem;
+}
+
+.about-content .btn{
+  margin: 3rem 0 ;
+} */
+/* About Section */
+.about {
+  position: relative;
+  padding: 100px 50px;
+  background-color: #111;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+/* About Image Background */
+.about-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: 1; */
+  opacity: 1;
+  object-fit: cover;
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About Heading at top-left */
+.about-heading {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  z-index: 2;
+  font-size: 7rem;
+  text-align: center;
+  justify-content: center;
+  font-weight: 900;
+  font-family: 'Inter', sans-serif;
+  margin-left: 50px;
+}
+
+.about-heading span {
+  color: linear-gradient(to right, orange, #ff4d4d);
+}
+
+/* About Content centered in the middle */
+.about-content {
+  z-index: 2;
+  max-width: auto;
+  margin: 0 auto;
+  margin-top:5%;
+  margin-bottom: 5%;
+  margin-left: 50px;
+  position: relative;
+  /* text-align: center; */
+}
+
+.about-content p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.8;
+  font-family: 'Jura', sans-serif;
+  margin-bottom: 2rem;
+}
+
+/* Read More Button aligned to the left */
+.about-content .btn{
+  margin: 5rem 0 ;
+  display: inline-block; /* Ensures the button behaves like an inline element */
+  text-align: left; /* Aligns the text to the left */
+}
+
+.marquee {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 50px 0; /* Added padding to provide space for marquee */
+}
+
+/* First Marquee Section */
+.marquee-one {
+  width: 100%;
+  padding: 50px;
+  /* border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff; */
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 100px; /* Position just above the second marquee */
+  font-family: 'Jura', sans-serif;
+  /* margin-left: 0%; */
+}
+
+.marquee-one h3 {
+  font-size: 94px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-family: 'Jura', sans-serif;
+  /* margin-left: 0%; */
+}
+
+/* Second Marquee Section */
+.marquee-two {
+  width: 100%;
+  padding: 50px 0;
+  /* border-top: 1px solid #ffffff; */
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0; /* Position at the very bottom of the section */
+  font-family: 'Jura', sans-serif;
+  /* margin-left: 0%; */
+}
+
+.marquee-two h3 {
+  font-size: 94px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-family: 'Jura', sans-serif;
+  /* margin-left: 0%; */
+}
+
+/* Common Marquee Animation */
+.marquee .marquee-wrapper {
+  width: 100000px;
+  animation: marqueeAnimation 38s linear infinite;
+   /* margin-left: 0%; */
+}
+
+.marquee h3 .marquee-title {
+  /* margin-right: 20px; */
+  float: left;
+  font-family: 'Jura', sans-serif;
+  /* margin-left: 0%; */
+}
+
+
+
+@keyframes marqueeAnimation {
+  100% {
+    transform: translateX(-4600px);
+  }
+}
+
+@media (max-width: 992px) {
+  .marquee h3 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .marquee h3 {
+    font-size: 60px;
+  }
+}
+
+
+::-webkit-scrollbar-thumb{
+  background-color:  var(--main-color);
+}
+
+::-webkit-scrollbar-track{
+  background-color: var(--bg-color);
+}
+
+.heading{
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+  font-family: "Inter", bold;
+}
+
+.project{
+  background-color: var(--bg-color);
+  color: black;
+}
+
+.project h2{
+  color: var(--text-color);
+}
+
+.project-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.project-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 600px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid var(--main-color);
+  transition: 0.3s ease-in-out;
+}
+
+.project-box:hover{
+  background: var(--main-color);
+  color: black;
+  border: 5px solid transparent;
+  transform:scale(1.03);
+}
+
+.project-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+
+.project-info h4{
+  font-size: 4rem;
+  margin: 2rem 0;
+  font-weight: 800;
+  color: var(--main-color);
+  transition: 0.3s ease-in-out;
+  font-family: "Inter", bold;
+}
+
+.project-info:hover h4{
+  background-color: transparent;
+  color: black;
+}
+
+.project-info p{
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: white;
+  font-family: "Jura", sans-serif;
+}
+
+.project-info i{
+  font-size: 8rem;
+  color: white;
+}
+
+/* Container section for the Nike poster */
+.nike-poster-section {
+  background: #030609;
+  height: 1117px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Text container for the poster description */
+.nike-poster-description {
+  text-align: left;
+  position: absolute;
+  left: 1011px;
+  top: 95px;
+  width: 575px;
+  height: 692px;
+}
+
+/* Title of the Nike poster */
+.nike-poster-title {
+  color: #f63332;
+  font-family: "Jura", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* Empty subtitle to maintain spacing */
+.nike-poster-subtitle {
+  color: #ffffff;
+  font-family: "Jura", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+/* Description - Main content text */
+.nike-poster-content {
+  color: #ffffff;
+  font-family: "Jura", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+/* Image positioning and styling */
+.poster-image {
+  width: 885px;
+  height: 1107px;
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  object-fit: cover;
+}
+
+
+/* Container for the logo project section */
+.logo-section {
+  background: #030609;
+  height: 1117px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling for the logo image */
+.logo-image {
+  width: 1571px;
+  height: 1117px;
+  position: absolute;
+  left: 391px;
+  top: 0;
+  object-fit: cover;
+}
+
+/* Text container for the logo description */
+.logo-description {
+  text-align: left;
+  position: absolute;
+  left: 103px;
+  top: 141px;
+  width: 551px;
+  height: 860px;
+}
+
+/* Title of the logo project */
+.logo-title {
+  color: #2fdd2e;
+  font-family: "Jura", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+/* Empty subtitle to maintain spacing */
+.logo-subtitle {
+  color: #f63332;
+  font-family: "Jura", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* Main content of the logo description */
+.logo-content {
+  color: #ffffff;
+  font-family: "Jura", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.container, .container * {
+  box-sizing: border-box;
+}
+
+.container {
+  background:var(--bg-color);
+  padding: 20px;
+  max-width: 1700px;
+  margin: auto;
+  color: #ffffff;
+}
+
+.container p{
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  color: var(--main-color);
+}
+
+.container h2{
+  font-family: "Jura", sans-serif;
+  color: var(--main-color);
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-wrap: wrap;
+  font-family: "Jura", sans-serif;
+}
+
+.text-content {
+  flex: 1;
+  max-width: 1000px;
+  font-family: "Jura", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: white;
+  font-weight: 500;
+  font-family: "Jura", sans-serif;
+}
+
+.highlight-big {
+  color: #ff9900;
+  font-size: 50px;
+  font-weight: 800;
+  font-family: "Jura", sans-serif;
+}
+
+.image-content {
+  max-width: 950px; /* Adjust the max-width to ensure image doesn't shrink */
+  width: 100%;
+  text-align: right;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+  max-width: 450px; /* Ensuring the image keeps its size */
+}
+
+
+.cartzy-section,
+.cartzy-section * {
+  box-sizing: border-box;
+}
+
+.cartzy-section {
+  background: #030609;
+  height: auto; /* Changed to auto for better content fitting */
+  padding: 50px 97px; /* Added padding for spacing */
+  position: relative;
+}
+
+.header1 {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Jura", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.scanner-container {
+  display: flex; /* Use flexbox to arrange scanner info side by side */
+  justify-content: space-between; /* Space between the items */
+  margin-bottom: 30px; /* Space below the scanners */
+}
+
+.scanner-info {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Jura", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  flex: 1; /* Allow each scanner info to take equal space */
+  margin: 0 10px; /* Add some horizontal margin */
+}
+
+.instructions {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Jura", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 30px; /* Add space below instructions */
+}
+
+.user-journey {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Jura", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px; /* Space below user journey */
+}
+
+.methods {
+  color: #ffffff;
+  text-align: left;
+  font-family: "Jura", sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+}
+
+
+
+
+.mockup-section,
+.mockup-section * {
+  box-sizing: border-box;
+}
+
+.mockup-section {
+  background: #030609;
+  height: auto; /* Keeps the height flexible */
+  position: relative;
+  padding: 50px 63px; /* Added padding for spacing */
+}
+
+.header2 {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Jura", sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px; /* Space between header and images */
+}
+
+.mockup-img {
+  width: 100%; /* Adjusts the mockup image to be responsive */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the designated area */
+  margin-bottom: 200px; /* Space between the mockup and additional image */
+}
+
+.additional-img {
+  width: 100%; /* Adjusts the additional image to be responsive */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image covers the designated area */
+}
+
+.coffee-cart,
+.coffee-cart * {
+    box-sizing: border-box;
+}
+
+.coffee-cart {
+    background: #030609;
+    padding: 50px; /* Add padding for spacing */
+    position: relative;
+    height: auto;
+}
+
+.header3 {
+    color: var(--main-color);
+    text-align: left;
+    font-family: "Inter", sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    margin-left: 5rem;
+    margin-bottom: 20px; /* Add spacing below */
+}
+
+.content {
+    display: flex; /* Make content a flex container */
+    margin-bottom: 20px; /* Spacing below content */
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column; /* Stack main image and convenience vertically */
+    margin-right: 20px; /* Space between left and right containers */
+}
+
+.main-img {
+    border-radius: 20px;
+    width: 100%; /* Ensure full width */
+    max-width: 803px; /* Maintain max width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.convenience {
+    text-align: left;
+    font-family: "Jura", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1.5; /* Add line height for better readability */
+}
+
+.img-container {
+    display: flex;
+    flex-direction: column; /* Stack description and images vertically */
+    margin-top: 15px; /* Space above img-container */
+    margin-left: 30px;
+}
+
+.description {
+    text-align: left;
+    font-family: "Jura", sans-serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: var(--main-color);
+    max-width: 800px; /* Control width of description */
+}
+
+.sub-images {
+    display: flex; /* Align secondary and third images side by side */
+    justify-content: flex-start; /* Align images to the left */
+    gap: 20px; /* Space between images */
+    margin-top: 100px; /* Space above the images */
+}
+
+.secondary-img {
+    opacity: 0.85;
+    width: 578px;
+    height: 495px;
+    object-fit: cover;
+}
+
+.third-img {
+    width: 302px;
+    height: 422px;
+    object-fit: cover;
+}
+
+
+.macbook-section * {
+  box-sizing: border-box;
+}
+
+.macbook-section {
+  background: #030609;
+  height: 1117px;
+  position: relative;
+  overflow: hidden;
+}
+
+.typography {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Jura-Bold", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  position: absolute;
+  left: 86px;
+  top: calc(50% - 487.5px);
+  width: 827px;
+}
+
+.typography-content,
+.typography-content-2 {
+  color: #ffffff;
+  text-align: left;
+  position: absolute;
+  left: 86px;
+  width: 605px;
+}
+
+.typography-content {
+  top: calc(50% - 334.5px);
+}
+
+.typography-content-2 {
+  top: calc(50% - 50px); /* Adjusted spacing to prevent overlap */
+}
+
+.content-title1,
+.content-title2 {
+  width: 100%; /* Ensure images take full width of their containers */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.image {
+  width: 703px;
+  height: 443px;
+  position: absolute;
+  left: 934px;
+  top: 375px;
+  object-fit: cover;
+}
+
+.color-palette {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Jura-Bold", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  position: absolute;
+  left: 934px;
+  top: calc(50% - 487.5px);
+  width: 827px;
+}
+
+.mood-section,
+.mood-section * {
+  box-sizing: border-box;
+}
+
+.mood-section {
+  background: #030609;
+  height: 1117px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mood-title {
+  color: #ff9900;
+  text-align: left;
+  font-family: "Jura-Bold", sans-serif;
+  font-size: 80px;
+  font-weight: 700;
+  position: absolute;
+  left: 86px;
+  top: calc(50% - 487.5px);
+  width: 810px;
+}
+
+.visiting-card {
+  border-radius: 20px;
+  width: 966px;
+  height: 618px;
+  position: absolute;
+  left: 810px;
+  top: 349px;
+  object-fit: cover;
+}
+
+.coffee-presentation {
+  border-radius: 20px;
+  width: 722px;
+  height: 618px;
+  position: absolute;
+  left: 52px;
+  top: 349px;
+  object-fit: cover;
+}
+
+
+.mbp-section,
+.mbp-section * {
+  box-sizing: border-box;
+}
+
+.mbp-section {
+  background: #030609;
+  height: 1117px;
+  position: relative;
+  overflow: hidden;
+}
+
+.packaging {
+  border-radius: 20px;
+  width: 876px;
+  height: 860px;
+  position: absolute;
+  left: 59px;
+  top: 137px;
+  object-fit: cover;
+}
+
+.menu {
+  border-radius: 20px;
+  width: 704px;
+  height: 860px;
+  position: absolute;
+  left: 1070px;
+  top: 137px;
+  object-fit: cover;
+}
+
+
+
+
+.contact{
+  background-color: var(--bg-color);
+}
+
+.contact h2{
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.contact form .input-box input, 
+.contact form textarea{
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem 0;
+  resize: none;
+}
+
+.footer{
+  background-color: var(--second-bg-color);
+  padding: 50px 0;
+}
+
+.footer .social-icons{
+  text-align: center;
+}
+
+.footer ul{
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--main-color);
+}
+
+.footer .copyright{
+  text-align: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
